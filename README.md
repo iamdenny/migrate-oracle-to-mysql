@@ -28,6 +28,8 @@ git clone https://github.com/iamdenny/migrate-oracle-to-mysql.git
 
 ## How to use
 
+Make mysql tables same as oracle tables first.
+
 ```js
 var Mom = require('migrate-oracle-to-mysql');
 var oMom = new Mom({
