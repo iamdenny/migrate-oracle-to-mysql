@@ -21,6 +21,7 @@ git clone https://github.com/iamdenny/migrate-oracle-to-mysql.git
 ENV 
 * It's really important. You should set up these variables
 * '/opt/instantclient' is the installed directory of Oracle Client
+
 ```bash
 export OCI_INCLUDE_DIR=/opt/instantclient/sdk/include
 export OCI_LIB_DIR=/opt/instantclient
