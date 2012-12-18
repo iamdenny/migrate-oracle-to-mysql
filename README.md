@@ -75,6 +75,7 @@ oMom.on('connected', function(){
 });
 ```
 
+Execute
 ```bash
 node app.js
 ```
