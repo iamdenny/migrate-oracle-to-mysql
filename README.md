@@ -13,7 +13,14 @@ NPM
 npm install migrate-oracle-to-mysql
 ```
 
-ENV
+GIT
+```bash
+git clone https://github.com/iamdenny/migrate-oracle-to-mysql.git
+```
+
+ENV 
+* It's really important. You should set up these variables
+* '/opt/instantclient' is the installed directory of Oracle Client
 ```bash
 export OCI_INCLUDE_DIR=/opt/instantclient/sdk/include
 export OCI_LIB_DIR=/opt/instantclient
@@ -21,15 +28,11 @@ export LD_LIBRARY_PATH=/opt/instantclient
 export NLS_LANG=American_America.AL32UTF8
 ```
 
-GIT
-```bash
-git clone https://github.com/iamdenny/migrate-oracle-to-mysql.git
-```
-
 ## How to use
 
-Make mysql tables same as oracle tables first.
+Make tables schema on Mysql same as tables schema on Oracle first.
 
+app.js
 ```js
 var Mom = require('migrate-oracle-to-mysql');
 var oMom = new Mom({
@@ -70,4 +73,8 @@ oMom.on('connected', function(){
     console.log('All done', htResult);
     process.exit(0);
 });
+```
+
+```bash
+node app.js
 ```
