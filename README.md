@@ -35,20 +35,22 @@ Make tables schema on Mysql same as tables schema on Oracle first.
 app.js
 ```js
 var Mom = require('migrate-oracle-to-mysql');
-var oMom = new Mom({
+var htOracle = {
     sHostname : '127.0.0.1',
     sUser : 'username',
     sPassword : 'password',
     nPort : 1527,
     sDatabase : 'database or sid'
-}, {
+};
+var htMysql = {
     sHostname : '127.0.0.1',
     sUser : 'username',
     sPassword : 'password',
     nPort : 3306,
     sDatabase : 'database',
     bDebug : false
-});
+};
+var oMom = new Mom(htOracle, htMysql);
 
 oMom.on('connected', function(){
 	// first arg : oracle query
