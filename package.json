@@ -1,6 +1,6 @@
 {
     "name": "migrate-oracle-to-mysql"
-  , "version": "0.1.1"
+  , "version": "0.1.2"
   , "sescripton" : "Migrate oracle to mysql"
   , "keywords" : ["migrate","oracle","mysql","convert"]
   , "homepage" : "https://github.com/iamdenny/migrate-oracle-to-mysql"
